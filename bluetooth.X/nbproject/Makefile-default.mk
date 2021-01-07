@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED=main.c gm_lcd.c eusart1.c
+SOURCEFILES_QUOTED_IF_SPACED=main.c gm_lcd.c eusart1.c hc05.c
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.p1 ${OBJECTDIR}/gm_lcd.p1 ${OBJECTDIR}/eusart1.p1
-POSSIBLE_DEPFILES=${OBJECTDIR}/main.p1.d ${OBJECTDIR}/gm_lcd.p1.d ${OBJECTDIR}/eusart1.p1.d
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/main.p1 ${OBJECTDIR}/gm_lcd.p1 ${OBJECTDIR}/eusart1.p1 ${OBJECTDIR}/hc05.p1
+POSSIBLE_DEPFILES=${OBJECTDIR}/main.p1.d ${OBJECTDIR}/gm_lcd.p1.d ${OBJECTDIR}/eusart1.p1.d ${OBJECTDIR}/hc05.p1.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/main.p1 ${OBJECTDIR}/gm_lcd.p1 ${OBJECTDIR}/eusart1.p1
+OBJECTFILES=${OBJECTDIR}/main.p1 ${OBJECTDIR}/gm_lcd.p1 ${OBJECTDIR}/eusart1.p1 ${OBJECTDIR}/hc05.p1
 
 # Source Files
-SOURCEFILES=main.c gm_lcd.c eusart1.c
+SOURCEFILES=main.c gm_lcd.c eusart1.c hc05.c
 
 
 
@@ -118,6 +118,14 @@ ${OBJECTDIR}/eusart1.p1: eusart1.c  nbproject/Makefile-${CND_CONF}.mk
 	@-${MV} ${OBJECTDIR}/eusart1.d ${OBJECTDIR}/eusart1.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/eusart1.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
+${OBJECTDIR}/hc05.p1: hc05.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/hc05.p1.d 
+	@${RM} ${OBJECTDIR}/hc05.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c  -D__DEBUG=1   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/hc05.p1 hc05.c 
+	@-${MV} ${OBJECTDIR}/hc05.d ${OBJECTDIR}/hc05.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/hc05.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
 else
 ${OBJECTDIR}/main.p1: main.c  nbproject/Makefile-${CND_CONF}.mk 
 	@${MKDIR} "${OBJECTDIR}" 
@@ -142,6 +150,14 @@ ${OBJECTDIR}/eusart1.p1: eusart1.c  nbproject/Makefile-${CND_CONF}.mk
 	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/eusart1.p1 eusart1.c 
 	@-${MV} ${OBJECTDIR}/eusart1.d ${OBJECTDIR}/eusart1.p1.d 
 	@${FIXDEPS} ${OBJECTDIR}/eusart1.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
+	
+${OBJECTDIR}/hc05.p1: hc05.c  nbproject/Makefile-${CND_CONF}.mk 
+	@${MKDIR} "${OBJECTDIR}" 
+	@${RM} ${OBJECTDIR}/hc05.p1.d 
+	@${RM} ${OBJECTDIR}/hc05.p1 
+	${MP_CC} $(MP_EXTRA_CC_PRE) -mcpu=$(MP_PROCESSOR_OPTION) -c   -mdfp="${DFP_DIR}/xc8"  -fno-short-double -fno-short-float -memi=wordwrite -O0 -fasmfile -maddrqual=ignore -xassembler-with-cpp -mwarn=-3 -Wa,-a -DXPRJ_default=$(CND_CONF)  -msummary=-psect,-class,+mem,-hex,-file  -ginhx032 -Wl,--data-init -mno-keep-startup -mno-download -mdefault-config-bits $(COMPARISON_BUILD)  -std=c99 -gdwarf-3 -mstack=compiled:auto:auto:auto     -o ${OBJECTDIR}/hc05.p1 hc05.c 
+	@-${MV} ${OBJECTDIR}/hc05.d ${OBJECTDIR}/hc05.p1.d 
+	@${FIXDEPS} ${OBJECTDIR}/hc05.p1.d $(SILENT) -rsi ${MP_CC_DIR}../  
 	
 endif
 
