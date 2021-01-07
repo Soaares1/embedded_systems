@@ -7,9 +7,9 @@
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\language_support.h" 1 3
 # 2 "<built-in>" 2
 # 1 "hc05.c" 2
-# 15 "hc05.c"
-# 1 "./gm_lcd.h" 1
-# 21 "./gm_lcd.h"
+# 14 "hc05.c"
+# 1 "./hc05.h" 1
+# 15 "./hc05.h"
 # 1 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 1 3
 # 18 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 3
 extern const char __xc8_OPTIM_SPEED;
@@ -9550,24 +9550,11 @@ extern __attribute__((nonreentrant)) void _delaywdt(unsigned long);
 #pragma intrinsic(_delay3)
 extern __attribute__((nonreentrant)) void _delay3(unsigned char);
 # 33 "C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\\pic\\include\\xc.h" 2 3
-# 21 "./gm_lcd.h" 2
+# 15 "./hc05.h" 2
 
 
-
-void LCD_initialize (void);
-
-
-void LCD_clear (void);
-
-
-void LCD_pos (unsigned char linha, unsigned char coluna);
-
-
-void LCD_printchar (char character);
-
-
-void LCD_printstring(const char *s);
-# 15 "hc05.c" 2
+char HC05_configure(char name, char pswd, char baudrate);
+# 14 "hc05.c" 2
 
 # 1 "./eusart1.h" 1
 # 51 "./eusart1.h"
@@ -9692,7 +9679,7 @@ void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
 void EUSART1_SetOverrunErrorHandler(void (* interruptHandler)(void));
 # 351 "./eusart1.h"
 void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
-# 16 "hc05.c" 2
+# 15 "hc05.c" 2
 
 
 
