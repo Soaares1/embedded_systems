@@ -1177,37 +1177,41 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;gm_lcd.c: 114: }
 [e :UE 903 ]
 }
-"116
-[; ;gm_lcd.c: 116: void LCD_printstring (char *string, unsigned char length){
-[v _LCD_printstring `(v ~T0 @X0 1 ef2`*uc`uc ]
+"124
+[; ;gm_lcd.c: 124:  void LCD_printstring(const char *s)
+[v _LCD_printstring `(v ~T0 @X0 1 ef1`*Cuc ]
+"125
+[; ;gm_lcd.c: 125:  {
 {
 [e :U _LCD_printstring ]
-[v _string `*uc ~T0 @X0 1 r1 ]
-[v _length `uc ~T0 @X0 1 r2 ]
+"124
+[; ;gm_lcd.c: 124:  void LCD_printstring(const char *s)
+[v _s `*Cuc ~T0 @X0 1 r1 ]
+"125
+[; ;gm_lcd.c: 125:  {
 [f ]
-"117
-[; ;gm_lcd.c: 117:     unsigned char i = 0;
-[v _i `uc ~T0 @X0 1 a ]
-[e = _i -> -> 0 `i `uc ]
-"119
-[; ;gm_lcd.c: 119:     for (i = 0; i < (length - 1); i++){
-{
-[e = _i -> -> 0 `i `uc ]
-[e $U 914  ]
-[e :U 911 ]
-{
-"120
-[; ;gm_lcd.c: 120:         LCD_printchar (*(string + i));
-[e ( _LCD_printchar (1 *U + _string * -> -> _i `i `x -> -> # *U _string `i `x ]
-"121
-[; ;gm_lcd.c: 121:     }
-}
-[e ++ _i -> -> 1 `i `uc ]
-[e :U 914 ]
-[e $ < -> _i `i - -> _length `i -> 1 `i 911  ]
+"126
+[; ;gm_lcd.c: 126:      while(*s)
+[e $U 911  ]
 [e :U 912 ]
+"127
+[; ;gm_lcd.c: 127:      {
+{
+"128
+[; ;gm_lcd.c: 128:          LCD_printchar(*s);
+[e ( _LCD_printchar (1 *U _s ]
+"129
+[; ;gm_lcd.c: 129:          s++;
+[e ++ _s * -> -> 1 `i `x -> -> # *U _s `i `x ]
+"130
+[; ;gm_lcd.c: 130:      }
 }
-"122
-[; ;gm_lcd.c: 122: }
+[e :U 911 ]
+"126
+[; ;gm_lcd.c: 126:      while(*s)
+[e $ != -> *U _s `i -> 0 `i 912  ]
+[e :U 913 ]
+"131
+[; ;gm_lcd.c: 131:  }
 [e :UE 910 ]
 }

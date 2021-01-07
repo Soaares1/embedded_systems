@@ -27,7 +27,7 @@ void main(void) {
     LCD_initialize();
 
     LCD_pos (1,4);
-    LCD_printstring("Gustavo Soares", sizeof("Gustavo Soares"));
+    LCD_printstring("Gustavo Soares");
     
     while (1) {
         LED ^= 1; 

@@ -9566,7 +9566,7 @@ void LCD_pos (unsigned char linha, unsigned char coluna);
 void LCD_printchar (char character);
 
 
-void LCD_printstring (char *string, unsigned char length);
+void LCD_printstring(const char *s);
 # 21 "gm_lcd.c" 2
 
 
@@ -9662,11 +9662,12 @@ void LCD_printchar (char character){
     PORTCbits.RC0 = 0;
     for (i = 0; i < 200; i++);
 }
-
-void LCD_printstring (char *string, unsigned char length){
-    unsigned char i = 0;
-
-    for (i = 0; i < (length - 1); i++){
-        LCD_printchar (*(string + i));
-    }
-}
+# 124 "gm_lcd.c"
+ void LCD_printstring(const char *s)
+ {
+     while(*s)
+     {
+         LCD_printchar(*s);
+         s++;
+     }
+ }

@@ -27,15 +27,15 @@
 [v ___lmul __lmul `(ul  1 e 4 0 ]
 "91 C:\Program Files\Microchip\xc8\v2.31\pic\sources\c99\common\Umul64.c
 [v ___omul __omul `(uo  1 e 8 0 ]
-"26 C:\Users\soaar\Desktop\Projetos\Dez_2020_09.X\gm_lcd.c
+"26 C:\Users\soaar\Documents\GitHub\embedded_systems\teste_lcd.X\gm_lcd.c
 [v _LCD_initialize LCD_initialize `(v  1 e 1 0 ]
 "84
 [v _LCD_pos LCD_pos `(v  1 e 1 0 ]
 "105
 [v _LCD_printchar LCD_printchar `(v  1 e 1 0 ]
-"116
+"124
 [v _LCD_printstring LCD_printstring `(v  1 e 1 0 ]
-"11 C:\Users\soaar\Desktop\Projetos\Dez_2020_09.X\main.c
+"11 C:\Users\soaar\Documents\GitHub\embedded_systems\teste_lcd.X\main.c
 [v _main main `(v  1 e 1 0 ]
 "52 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f46k22.h
 [v _ANSELA ANSELA `VEuc  1 e 1 @3896 ]
@@ -122,20 +122,16 @@
 [v _TRISCbits TRISCbits `VES46  1 e 1 @3988 ]
 "8726
 [v _TRISD TRISD `VEuc  1 e 1 @3989 ]
-"11 C:\Users\soaar\Desktop\Projetos\Dez_2020_09.X\main.c
+"11 C:\Users\soaar\Documents\GitHub\embedded_systems\teste_lcd.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
 "36
 } 0
-"116 C:\Users\soaar\Desktop\Projetos\Dez_2020_09.X\gm_lcd.c
+"124 C:\Users\soaar\Documents\GitHub\embedded_systems\teste_lcd.X\gm_lcd.c
 [v _LCD_printstring LCD_printstring `(v  1 e 1 0 ]
 {
-"117
-[v LCD_printstring@i i `uc  1 a 1 13 ]
-"116
-[v LCD_printstring@string string `*.32uc  1 p 2 3 ]
-[v LCD_printstring@length length `uc  1 p 1 5 ]
-"122
+[v LCD_printstring@s s `*.32Cuc  1 p 2 3 ]
+"131
 } 0
 "105
 [v _LCD_printchar LCD_printchar `(v  1 e 1 0 ]

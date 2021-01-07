@@ -9832,7 +9832,7 @@ void LCD_pos (unsigned char linha, unsigned char coluna);
 void LCD_printchar (char character);
 
 
-void LCD_printstring (char *string, unsigned char length);
+void LCD_printstring(const char *s);
 # 5 "main.c" 2
 
 
@@ -9859,7 +9859,7 @@ void main(void) {
     LCD_initialize();
 
     LCD_pos (1,4);
-    LCD_printstring("Gustavo Soares", sizeof("Gustavo Soares"));
+    LCD_printstring("Gustavo Soares");
 
     while (1) {
         PORTCbits.RC2 ^= 1;

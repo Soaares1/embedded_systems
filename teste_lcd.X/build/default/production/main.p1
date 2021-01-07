@@ -69,8 +69,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;./gm_lcd.h: 30: void LCD_pos (unsigned char linha, unsigned char coluna);
 [v _LCD_pos `(v ~T0 @X0 0 ef2`uc`uc ]
 "36
-[; ;./gm_lcd.h: 36: void LCD_printstring (char *string, unsigned char length);
-[v _LCD_printstring `(v ~T0 @X0 0 ef2`*uc`uc ]
+[; ;./gm_lcd.h: 36: void LCD_printstring(const char *s);
+[v _LCD_printstring `(v ~T0 @X0 0 ef1`*Cuc ]
 [v F5956 `(v ~T0 @X0 1 tf1`ul ]
 "203 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\pic18.h
 [v __delay `JF5956 ~T0 @X0 0 e ]
@@ -946,8 +946,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;main.c: 29:     LCD_pos (1,4);
 [e ( _LCD_pos (2 , -> -> 1 `i `uc -> -> 4 `i `uc ]
 "30
-[; ;main.c: 30:     LCD_printstring("Gustavo Soares", sizeof("Gustavo Soares"));
-[e ( _LCD_printstring (2 , :s 1C -> -> 15 `ui `uc ]
+[; ;main.c: 30:     LCD_printstring("Gustavo Soares");
+[e ( _LCD_printstring (1 :s 1C ]
 "32
 [; ;main.c: 32:     while (1) {
 [e :U 859 ]
