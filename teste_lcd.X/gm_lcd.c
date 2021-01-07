@@ -1,6 +1,6 @@
 /* -----------------------------------------------------------------------------------------------------
  * Autor: Eng. Gustavo Moura 
- * Biblioteca para displays LCD (controlador HD44780U) -> Testado c/ display 4x20
+ * Biblioteca para displays LCDs (controlador HD44780U) -> Testado c/ display 4x20
  * Versão 1.0 (17/12/2020)
  * -----------------------------------------------------------------------------------------------------
  * Posicionamento no display (DDRAM):
