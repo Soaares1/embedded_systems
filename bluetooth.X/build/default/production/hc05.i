@@ -9699,8 +9699,7 @@ void EUSART1_SetErrorHandler(void (* interruptHandler)(void));
 
 
 
-char HC05_configure()
- {
+char HC05_configure(char name, char pswd, char baudrate){
      char data = 0;
 
      PORTCbits.RC2 = 1;

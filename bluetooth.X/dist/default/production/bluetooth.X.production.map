@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.31\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\bluetooth.X.production.sym \
   --cmf=dist/default/production\bluetooth.X.production.cmf -z -Q18F46K22 \
-  -oC:\Users\soaar\AppData\Local\Temp\sfps.2 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\soaar\AppData\Local\Temp\s2ps.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/bluetooth.X.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=060h-0F37h -pstack=STACK \
   -ACODE=00h-0FFFFh -ACONST=00h-0FFFFh -ASMALLCONST=01000h-010FFhx240 \
@@ -26,7 +26,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\soaar\AppData\Local\Temp\sfps.o \
+  C:\Users\soaar\AppData\Local\Temp\s2ps.o \
   dist/default/production\bluetooth.X.production.o 
 
 Object code version is 3.11
@@ -36,7 +36,7 @@ Machine type is 18F46K22
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\soaar\AppData\Local\Temp\sfps.o
+C:\Users\soaar\AppData\Local\Temp\s2ps.o
                 idloc                            200000   200000        8        0       5
                 config                           300000   300000        E        0       4
                 init                                 D6       D6        4        4       0

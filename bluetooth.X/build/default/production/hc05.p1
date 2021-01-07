@@ -800,47 +800,48 @@ Version 4.0 HI-TECH Software Intermediate Code
 [; ;C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f46k22.h: 17406: __asm("TOSU equ 0FFFh");
 [; <" TOSU equ 0FFFh ;# ">
 "22 hc05.c
-[; ;hc05.c: 22: char HC05_configure()
-[v _HC05_configure `(uc ~T0 @X0 1 ef ]
-"23
-[; ;hc05.c: 23:  {
+[; ;hc05.c: 22: char HC05_configure(char name, char pswd, char baudrate){
+[v _HC05_configure `(uc ~T0 @X0 1 ef3`uc`uc`uc ]
 {
 [e :U _HC05_configure ]
+[v _name `uc ~T0 @X0 1 r1 ]
+[v _pswd `uc ~T0 @X0 1 r2 ]
+[v _baudrate `uc ~T0 @X0 1 r3 ]
 [f ]
-"24
-[; ;hc05.c: 24:      char data = 0;
+"23
+[; ;hc05.c: 23:      char data = 0;
 [v _data `uc ~T0 @X0 1 a ]
 [e = _data -> -> 0 `i `uc ]
-"26
-[; ;hc05.c: 26:      PORTCbits.RC2 = 1;
+"25
+[; ;hc05.c: 25:      PORTCbits.RC2 = 1;
 [e = . . _PORTCbits 0 2 -> -> 1 `i `uc ]
-"28
-[; ;hc05.c: 28:      EUSART1_Write_Text("AT\r\n");
+"27
+[; ;hc05.c: 27:      EUSART1_Write_Text("AT\r\n");
 [e ( _EUSART1_Write_Text (1 :s 1C ]
-"29
-[; ;hc05.c: 29:      data = EUSART1_Read();
+"28
+[; ;hc05.c: 28:      data = EUSART1_Read();
 [e = _data -> ( _EUSART1_Read ..  `uc ]
-"35
-[; ;hc05.c: 35:      EUSART1_Write_Text("AT+NAME=HC-05\r\n");
+"34
+[; ;hc05.c: 34:      EUSART1_Write_Text("AT+NAME=HC-05\r\n");
 [e ( _EUSART1_Write_Text (1 :s 2C ]
-"36
-[; ;hc05.c: 36:      EUSART1_Write_Text("AT+PSWD=1234\r\n");
+"35
+[; ;hc05.c: 35:      EUSART1_Write_Text("AT+PSWD=1234\r\n");
 [e ( _EUSART1_Write_Text (1 :s 3C ]
-"37
-[; ;hc05.c: 37:      EUSART1_Write_Text("AT+UART=115200,0,0\r\n");
+"36
+[; ;hc05.c: 36:      EUSART1_Write_Text("AT+UART=115200,0,0\r\n");
 [e ( _EUSART1_Write_Text (1 :s 4C ]
-"38
-[; ;hc05.c: 38:      EUSART1_Write_Text("AT+RESET\r\n");
+"37
+[; ;hc05.c: 37:      EUSART1_Write_Text("AT+RESET\r\n");
 [e ( _EUSART1_Write_Text (1 :s 5C ]
-"39
-[; ;hc05.c: 39:      PORTCbits.RC2 = 0;
+"38
+[; ;hc05.c: 38:      PORTCbits.RC2 = 0;
 [e = . . _PORTCbits 0 2 -> -> 0 `i `uc ]
-"41
-[; ;hc05.c: 41:      return 1;
+"40
+[; ;hc05.c: 40:      return 1;
 [e ) -> -> 1 `i `uc ]
 [e $UE 856  ]
-"42
-[; ;hc05.c: 42:  }
+"41
+[; ;hc05.c: 41:  }
 [e :UE 856 ]
 }
 [a 5C 65 84 43 82 69 83 69 84 13 10 0 ]

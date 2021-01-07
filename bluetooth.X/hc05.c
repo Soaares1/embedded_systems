@@ -19,8 +19,7 @@
 #define mcu_rx PORTCbits.RC1 // RX do microcontrolador
 #define EN PORTCbits.RC2 // Deve ser utilizado um divisor resistivo para fornecer 3,3V ao módulo
 
-char HC05_configure()
- {  
+char HC05_configure(char name, char pswd, char baudrate){  
      char data = 0;
      
      EN = 1;
