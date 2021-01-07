@@ -9665,7 +9665,7 @@ uint8_t EUSART1_Read(void);
 # 307 "./eusart1.h"
 void EUSART1_Write(uint8_t txData);
 
-void EUSART1_Writes(const char *s);
+void EUSART1_Write_Text(const char *s);
 # 323 "./eusart1.h"
 void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
 # 337 "./eusart1.h"
@@ -9762,7 +9762,7 @@ void EUSART1_Write(uint8_t txData)
     TXREG1 = txData;
 }
 
- void EUSART1_Writes(const char *s)
+void EUSART1_Write_Text(const char *s)
  {
      while(*s)
      {

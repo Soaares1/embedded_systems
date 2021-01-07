@@ -59,7 +59,6 @@ _PIE1bits F9D 0 ABS 0
 __Heeprom_data 0 0 EEDATA 0
 __Leeprom_data 0 0 EEDATA 0
 _PIR1bits F9E 0 ABS 0
-__size_of_EUSART1_Writes 0 0 ABS 0
 __Hintsave_regs 0 0 BIGRAM 1
 __Lintsave_regs 0 0 BIGRAM 1
 __size_of_interrupcao 0 0 ABS 0
@@ -98,6 +97,7 @@ __HnvCOMRAM 0 0 ABS 0
 __LnvCOMRAM 0 0 ABS 0
 __pnvCOMRAM 1C 0 COMRAM 1
 __size_ofi2_LCD_pos 0 0 ABS 0
+__size_of_EUSART1_Write_Text 0 0 ABS 0
 interrupcao@data D 0 COMRAM 1
 _EUSART1_OverrunErrorHandler 1E 0 COMRAM 1
 _EUSART1_Initialize 141C 0 CODE 0
@@ -123,6 +123,7 @@ __end_of_EUSART1_SetFramingErrorHandler 1538 0 CODE 0
 __Htext 0 0 ABS 0
 __Ltext 0 0 ABS 0
 end_of_initialization 1504 0 CODE 0
+__end_of_EUSART1_Write_Text 14CE 0 CODE 0
 _SPBRGH1 FB0 0 ABS 0
 __size_of_EUSART1_SetFramingErrorHandler 0 0 ABS 0
 _OSCCON2 FD2 0 ABS 0
@@ -227,6 +228,7 @@ __Hnvbit 0 0 COMRAM 1
 __Lnvbit 0 0 COMRAM 1
 __Hcinit 0 0 ABS 0
 __Lcinit 0 0 ABS 0
+_EUSART1_Write_Text 1494 0 CODE 0
 __pcinit 14F8 0 CODE 0
 __ramtop 1000 0 RAM 0
 __mediumconst 0 0 MEDIUMCONST 0
@@ -240,7 +242,6 @@ __Lspace_4 0 0 ABS 0
 _EUSART1_SetErrorHandler 1538 0 CODE 0
 __end_of_EUSART1_SetErrorHandler 1542 0 CODE 0
 __end_of_EUSART1_Write 1524 0 CODE 0
-_EUSART1_Writes 1494 0 CODE 0
 i2LCD_pos@cte 4 0 COMRAM 1
 __Hbank10 0 0 ABS 0
 __Lbank10 0 0 ABS 0
@@ -290,10 +291,10 @@ _INTCONbits FF2 0 ABS 0
 EUSART1_SetErrorHandler@interruptHandler E 0 COMRAM 1
 __smallconst 1000 0 SMALLCONST 0
 _LCD_initialize 1030 0 CODE 0
-__end_of_EUSART1_Writes 14CE 0 CODE 0
 __Hreset_vec 4 0 CODE 0
 __Lreset_vec 0 0 CODE 0
 EUSART1_SetFramingErrorHandler@interruptHandler E 0 COMRAM 1
+EUSART1_Write_Text@s 2 0 COMRAM 1
 __size_of_EUSART1_Initialize 0 0 ABS 0
 __accesstop 60 0 ABS 0
 __Hintcode_body 0 0 ABS 0
@@ -311,7 +312,6 @@ i2LCD_pos@pos 3 0 COMRAM 1
 __size_of_LCD_printstring 0 0 ABS 0
 __initialization 14F8 0 CODE 0
 _LCD_printchar 1334 0 CODE 0
-EUSART1_Writes@s 2 0 COMRAM 1
 __activetblptr 3 0 ABS 0
 __end_of_LCD_pos 1268 0 CODE 0
 _eusart1RxLastError 1A 0 COMRAM 1
@@ -324,7 +324,7 @@ text2 1030 1541 CODE 1030 0
 %locals
 dist/default/production\bluetooth.X.production.o
 C:/Program Files/Microchip/MPLABX/v5.45/packs/Microchip/PIC18F-K_DFP/1.4.87/xc8\pic\include\proc\pic18f46k22.h
-C:\Users\soaar\AppData\Local\Temp\sk6c.s
+C:\Users\soaar\AppData\Local\Temp\s8h8.s
 1823 14F8 0 CODE 0
 1825 14F8 0 CODE 0
 1828 14F8 0 CODE 0
@@ -436,7 +436,7 @@ eusart1.c
 120 1538 0 CODE 0
 121 1538 0 CODE 0
 122 1540 0 CODE 0
-C:\Users\soaar\AppData\Local\Temp\sk6c.s
+C:\Users\soaar\AppData\Local\Temp\s8h8.s
 3382 8 0 CODE 0
 main.c
 14 8 0 CODE 0

@@ -26,7 +26,7 @@ void __interrupt() interrupcao() {
             __delay_ms(2);
             LCD_pos(3,1);
             LCD_printstring("Ligado !");
-            EUSART1_Writes("Ligado !\r\n");
+            EUSART1_Write_Text("Ligado !\r\n");
         }
         
         if (data == 'D'){
@@ -34,7 +34,7 @@ void __interrupt() interrupcao() {
             __delay_ms(2);
             LCD_pos(3,1);
             LCD_printstring("Desligado !");
-            EUSART1_Writes("Desligado !\r\n");
+            EUSART1_Write_Text("Desligado !\r\n");
         }
     }
 }
@@ -71,7 +71,7 @@ void main(void) {
     LCD_pos(1,1); 
 
     while (1) {
-        //EUSART1_Writes("Hello World!\n");
+        //EUSART1_Write_Text("Hello World!\n");
 //        LCD_pos(1,4);        
 //        LCD_printchar(data+48);
         

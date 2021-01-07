@@ -306,7 +306,7 @@ uint8_t EUSART1_Read(void);
 */
 void EUSART1_Write(uint8_t txData);
 
-void EUSART1_Write_Text(const char *s);
+void EUSART1_Writes(const char *s);
 
 /**
   @Summary

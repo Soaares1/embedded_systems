@@ -5,7 +5,7 @@ Linker command line:
 -W-3 --edf=C:\Program Files\Microchip\xc8\v2.31\pic\dat\en_msgs.txt -cn \
   -h+dist/default/production\bluetooth.X.production.sym \
   --cmf=dist/default/production\bluetooth.X.production.cmf -z -Q18F46K22 \
-  -oC:\Users\soaar\AppData\Local\Temp\sk6c.3 --defsym=__MPLAB_BUILD=1 \
+  -oC:\Users\soaar\AppData\Local\Temp\s8h8.2 --defsym=__MPLAB_BUILD=1 \
   -Mdist/default/production/bluetooth.X.production.map -E1 \
   -ver=XC8 Compiler --acfsm=1493 -ASTACK=060h-0F37h -pstack=STACK \
   -ACODE=00h-0FFFFh -ACONST=00h-0FFFFh -ASMALLCONST=01000h-010FFhx240 \
@@ -26,7 +26,7 @@ Linker command line:
   -pfarbss=FARRAM,fardata=FARRAM,nvFARRAM=FARRAM \
   -pintsave_regs=BIGRAM,bigbss=BIGRAM,bigdata=BIGRAM -pbss=RAM \
   -pidata=CODE,irdata=CODE,ibigdata=CODE,ifardata=CODE -prparam=COMRAM \
-  C:\Users\soaar\AppData\Local\Temp\sk6c.o \
+  C:\Users\soaar\AppData\Local\Temp\s8h8.o \
   dist/default/production\bluetooth.X.production.o 
 
 Object code version is 3.11
@@ -36,7 +36,7 @@ Machine type is 18F46K22
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\soaar\AppData\Local\Temp\sk6c.o
+C:\Users\soaar\AppData\Local\Temp\s8h8.o
                 idloc                            200000   200000        8        0       5
                 config                           300000   300000        E        0       4
                 init                                 D6       D6        4        4       0
@@ -203,7 +203,7 @@ EUSART1_SetErrorHandler@interruptHandler        cstackCOMRAM 00000E
 EUSART1_SetFramingErrorHandler@interruptHandler cstackCOMRAM 00000E
 EUSART1_SetOverrunErrorHandler@interruptHandler cstackCOMRAM 00000E
 EUSART1_Write@txData                            cstackCOMRAM 000001
-EUSART1_Writes@s                                cstackCOMRAM 000002
+EUSART1_Write_Text@s                            cstackCOMRAM 000002
 LCD_clear@i                                     cstackCOMRAM 000001
 LCD_initialize@i                                cstackCOMRAM 00000E
 LCD_pos@coluna                                  cstackCOMRAM 00000E
@@ -231,7 +231,7 @@ _EUSART1_SetErrorHandler                        text6        001538
 _EUSART1_SetFramingErrorHandler                 text5        00152E
 _EUSART1_SetOverrunErrorHandler                 text4        001524
 _EUSART1_Write                                  text13       00150E
-_EUSART1_Writes                                 text12       001494
+_EUSART1_Write_Text                             text12       001494
 _INTCONbits                                     (abs)        000FF2
 _LCD_clear                                      text11       001386
 _LCD_initialize                                 text2        001030
@@ -440,7 +440,7 @@ __end_of_EUSART1_SetErrorHandler                text6        001542
 __end_of_EUSART1_SetFramingErrorHandler         text5        001538
 __end_of_EUSART1_SetOverrunErrorHandler         text4        00152E
 __end_of_EUSART1_Write                          text13       001524
-__end_of_EUSART1_Writes                         text12       0014CE
+__end_of_EUSART1_Write_Text                     text12       0014CE
 __end_of_LCD_clear                              text11       0013D6
 __end_of_LCD_initialize                         text2        00119C
 __end_of_LCD_pos                                text1        001268
@@ -479,7 +479,7 @@ __size_of_EUSART1_SetErrorHandler               (abs)        000000
 __size_of_EUSART1_SetFramingErrorHandler        (abs)        000000
 __size_of_EUSART1_SetOverrunErrorHandler        (abs)        000000
 __size_of_EUSART1_Write                         (abs)        000000
-__size_of_EUSART1_Writes                        (abs)        000000
+__size_of_EUSART1_Write_Text                    (abs)        000000
 __size_of_LCD_clear                             (abs)        000000
 __size_of_LCD_initialize                        (abs)        000000
 __size_of_LCD_pos                               (abs)        000000
@@ -765,7 +765,7 @@ Total ram usage:        6 bytes
  Hardware stack levels required when called:    2
  This function calls:
 		_EUSART1_Read
-		_EUSART1_Writes
+		_EUSART1_Write_Text
 		_LCD_clear
 		_LCD_printchar
 		_LCD_printstring
@@ -899,7 +899,7 @@ Total ram usage:        2 bytes
  This function uses a non-reentrant model
 
 
- *************** function _EUSART1_Writes *****************
+ *************** function _EUSART1_Write_Text *****************
  Defined at:
 		line 90 in file "eusart1.c"
  Parameters:    Size  Location     Type
@@ -955,7 +955,7 @@ Total ram usage:        1 bytes
  This function calls:
 		Nothing
  This function is called by:
-		_EUSART1_Writes
+		_EUSART1_Write_Text
  This function uses a non-reentrant model
 
 
@@ -1004,11 +1004,11 @@ gm_lcd.c estimated size: 788
 eusart1.c
 		_EUSART1_Initialize		CODE           	141C	0000	62
 		_EUSART1_SetFramingErrorHandler		CODE           	152E	0000	10
+		_EUSART1_Write_Text		CODE           	1494	0000	58
 		_EUSART1_Read  		CODE           	14CE	0000	42
 		_EUSART1_SetOverrunErrorHandler		CODE           	1524	0000	10
 		_EUSART1_SetErrorHandler		CODE           	1538	0000	10
 		_EUSART1_Write 		CODE           	150E	0000	22
-		_EUSART1_Writes		CODE           	1494	0000	58
 
 eusart1.c estimated size: 214
 

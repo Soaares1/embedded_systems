@@ -9951,7 +9951,7 @@ uint8_t EUSART1_Read(void);
 # 307 "./eusart1.h"
 void EUSART1_Write(uint8_t txData);
 
-void EUSART1_Writes(const char *s);
+void EUSART1_Write_Text(const char *s);
 # 323 "./eusart1.h"
 void EUSART1_SetFramingErrorHandler(void (* interruptHandler)(void));
 # 337 "./eusart1.h"
@@ -9982,7 +9982,7 @@ void __attribute__((picinterrupt(("")))) interrupcao() {
             _delay((unsigned long)((2)*(20000000/4000.0)));
             LCD_pos(3,1);
             LCD_printstring("Ligado !");
-            EUSART1_Writes("Ligado !\r\n");
+            EUSART1_Write_Text("Ligado !\r\n");
         }
 
         if (data == 'D'){
@@ -9990,7 +9990,7 @@ void __attribute__((picinterrupt(("")))) interrupcao() {
             _delay((unsigned long)((2)*(20000000/4000.0)));
             LCD_pos(3,1);
             LCD_printstring("Desligado !");
-            EUSART1_Writes("Desligado !\r\n");
+            EUSART1_Write_Text("Desligado !\r\n");
         }
     }
 }

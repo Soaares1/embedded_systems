@@ -1079,14 +1079,14 @@ Version 4.0 HI-TECH Software Intermediate Code
 [e :UE 866 ]
 }
 "90
-[; ;eusart1.c: 90:  void EUSART1_Writes(const char *s)
-[v _EUSART1_Writes `(v ~T0 @X0 1 ef1`*Cuc ]
+[; ;eusart1.c: 90: void EUSART1_Write_Text(const char *s)
+[v _EUSART1_Write_Text `(v ~T0 @X0 1 ef1`*Cuc ]
 "91
 [; ;eusart1.c: 91:  {
 {
-[e :U _EUSART1_Writes ]
+[e :U _EUSART1_Write_Text ]
 "90
-[; ;eusart1.c: 90:  void EUSART1_Writes(const char *s)
+[; ;eusart1.c: 90: void EUSART1_Write_Text(const char *s)
 [v _s `*Cuc ~T0 @X0 1 r1 ]
 "91
 [; ;eusart1.c: 91:  {
